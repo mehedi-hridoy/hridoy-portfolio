@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -9,71 +9,100 @@ export default function LeftCard() {
   return (
     <div
       className="
-        w-[344px]
+        w-[360px]
         bg-black/40 dark:bg-white/10
         backdrop-blur-xl
-        rounded-3xl
+        rounded-[32px]
         border border-white/10
-        p-8
+        p-10
         shadow-xl
         text-center
         font-poppins
       "
     >
       {/* Profile Image */}
-      <div className="w-[240px] h-[284px] rounded-2xl overflow-hidden mx-auto mb-8">
+      <div className="w-[250px] h-[300px] rounded-2xl overflow-hidden mx-auto mb-8">
         <Image
           src="/images/Mehedi_hridoy.png"
           alt="Mehedi Hasan Hridoy"
-          width={240}
-          height={284}
-          unoptimized={true}       // ⬅ load EXACT file, no optimization
-          priority={true}
+          width={250}
+          height={300}
+          unoptimized={true}
+          priority
           className="object-cover"
-          style={{
-            imageRendering: "crisp-edges",    // force sharper rendering
-          }}
+          style={{ imageRendering: "crisp-edges" }}
         />
       </div>
 
       {/* Name */}
-      <h2 className="text-2xl font-semibold text-white mb-2">
-        Mehedi Hasan Hridoy
-      </h2>
+      <h2 className="text-[26px] font-extrabold text-white mb-3 whitespace-nowrap">
+  Mehedi Hasan Hridoy
+</h2>
+
 
       {/* Title */}
-      <p className="text-gray-300 text-sm">Full Stack Engineer</p>
+      <p className="text-gray-300 text-[15px] font-medium mb-1">
+        Full Stack Engineer
+      </p>
 
       {/* Location */}
-      <p className="text-gray-500 text-xs mt-1">
+      <p className="text-gray-500 text-xs tracking-wide mb-6">
         Dhaka, Bangladesh
       </p>
 
       {/* Social Icons */}
-      <div className="flex items-center justify-center gap-6 mt-6 text-white/80 text-[20px]">
-        <a href="https://github.com/mehedi-hridoy" target="_blank" className="hover:text-white transition"><FaGithub /></a>
-        <a href="https://x.com/_Mehedi_Hridoy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+      <div className="flex items-center justify-center gap-7 mb-10 text-white/90 text-[22px]">
+        <a
+          href="https://github.com/mehedi-hridoy"
+          target="_blank"
+          className="hover:text-white transition"
+        >
+          <FaGithub />
+        </a>
+
+        <a
+          href="https://x.com/_Mehedi_Hridoy"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-white transition"
+        >
           <FaXTwitter />
         </a>
-        <a href="https://www.instagram.com/mehedi_hasan_.hridoy/" target="_blank" className="hover:text-white transition"><FaInstagram /></a>
-        <a href="mailto:mehedi.hridoy101@gmail.com" className="hover:text-white transition"><HiOutlineEnvelope /></a>
+
+        <a
+          href="https://www.instagram.com/mehedi_hasan_.hridoy/"
+          target="_blank"
+          className="hover:text-white transition"
+        >
+          <FaInstagram />
+        </a>
+
+        <a
+          href="mailto:mehedi.hridoy101@gmail.com"
+          className="hover:text-white transition"
+        >
+          <HiOutlineEnvelope />
+        </a>
       </div>
 
       {/* Button */}
-      <button
-        className="
-          mt-10
-          w-[180px]
-          mx-auto
-          py-3
-          bg-purple-600 hover:bg-purple-500
-          rounded-xl
-          text-white text-sm font-medium
-          transition
-        "
-      >
-        Let’s Talk
-      </button>
+      <Link
+  href="/contact"
+  className="
+    w-[200px]
+    mx-auto
+    py-3.5
+    bg-purple-600 hover:bg-purple-500
+    rounded-xl
+    text-white
+    text-[15px]
+    font-semibold
+    transition-all
+    block text-center
+  "
+>
+  Let’s Talk
+</Link>
     </div>
   );
 }

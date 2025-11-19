@@ -126,3 +126,19 @@ html {
 
   }
 }
+.logo-loop img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+/* Light mode → logos stay dark */
+.light .logo-loop img {
+  filter: invert(0);
+}
+
+/* Dark mode → logos turn white */
+.dark .logo-loop img {
+  filter: invert(1) brightness(2);
+}
