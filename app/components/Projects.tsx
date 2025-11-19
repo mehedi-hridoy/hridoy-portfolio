@@ -1,8 +1,34 @@
+"use client";
+
+import SplitText from "@/app/components/SplitText";
+import ProjectCard from "@/app/components/ProjectCard";
+import { projects } from "@/app/data/projects";
+
 export default function Projects() {
   return (
-    <div className="text-white dark:text-white">
-      <h1 className="text-3xl font-bold mb-4">Projects</h1>
-      <p>Projects section coming soon...</p>
-    </div>
+    <section id="projects" className="mt-40 w-full">
+      
+      {/* Heading */}
+      <div className="max-w-[760px] text-left mb-16">
+        <SplitText
+          text={
+            <>
+              <span className="block">Crafted Projects</span>
+              <span className="block">
+                & <span className="text-[#A855F7]">Achievements</span>
+              </span>
+            </>
+          }
+          className="text-[48px] font-extrabold leading-[1.15] text-white tracking-tight"
+        />
+      </div>
+
+      {/* Project Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+        {projects.map((project) => (
+          <ProjectCard key={project.slug} project={project} />
+        ))}
+      </div>
+    </section>
   );
 }
