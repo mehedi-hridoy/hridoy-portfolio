@@ -1,6 +1,6 @@
 import Hero from "./Hero";
 import Projects from "./Projects";
-import Tools from "./Tools";
+import Tools from "./Tools/Tools";
 import About from "./About";
 import Contact from "./Contact";
 
