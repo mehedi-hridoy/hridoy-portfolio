@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProviderWrapper } from "./providers/ThemeProviderWrapper";
 import SplashCursor from "./components/ui/SplashCursor";
 import { Poppins } from "next/font/google";
+import { Toaster } from "sonner";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,15 +16,18 @@ export const metadata: Metadata = {
   description: "Personal portfolio of Mehedi Hasan Hridoy",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-
-     <body className={`${poppins.variable} font-poppins antialiased`}>
-
+      <body className={`${poppins.variable} font-poppins antialiased`}>
         <ThemeProviderWrapper>
           <SplashCursor />
           {children}
+          <Toaster richColors position="top-right" />
         </ThemeProviderWrapper>
       </body>
     </html>
