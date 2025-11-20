@@ -1,6 +1,6 @@
 "use client";
 
-import SplitText from "@/app/components/SplitText";
+import SplitText from "@/app/components/ui/SplitText";
 import ProjectCard from "@/app/components/ProjectCard";
 import { projects } from "@/app/data/projects";
 

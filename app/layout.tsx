@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProviderWrapper } from "./providers/ThemeProviderWrapper";
-import SplashCursor from "./components/SplashCursor";
+import SplashCursor from "./components/ui/SplashCursor";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({

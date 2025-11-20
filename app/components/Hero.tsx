@@ -1,8 +1,8 @@
 "use client";
 
-import SplitText from "@/app/components/SplitText";
-import TextType from "@/app/components/TextType";
-import LogoLoop from "@/app/components/LogoLoop";
+import SplitText from "@/app/components/ui/SplitText";
+import TextType from "@/app/components/ui/TextType";
+import LogoLoop from "@/app/components/ui/LogoLoop";
 import { useEffect, useRef, useState } from "react";
 
 import { ArrowRight } from "lucide-react";
