@@ -3,6 +3,8 @@ import Projects from "./Projects";
 import Tools from "./Tools/Tools";
 import About from "./About";
 import Contact from "./Contact";
+import Academics from "./Academics";
+
 
 export default function RightContent() {
   return (
@@ -20,6 +22,11 @@ export default function RightContent() {
       {/* TOOLS */}
       <section id="tools">
         <Tools />
+      </section>
+
+        {/* TOOLS */}
+      <section id="academics">
+        <Academics />
       </section>
 
       {/* ABOUT */}

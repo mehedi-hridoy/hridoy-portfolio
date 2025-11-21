@@ -3,7 +3,8 @@ export type ProjectMeta = {
   title: string;
   tagline: string;
   blurb?: string;
-  coverImage?: string; // /images/projects/<slug>.png (optional)
+  /** Absolute path under /public. Use /images/<slug>.png */
+  coverImage?: string;
 };
 
 export const projects: ProjectMeta[] = [
@@ -13,7 +14,7 @@ export const projects: ProjectMeta[] = [
     tagline: "An e‑commerce platform bringing rooted products directly from producers",
     blurb:
       "Discover authentic, locally rooted goods while empowering producers with a modern, accessible marketplace.",
-    // coverImage: "/images/projects/ethnicart.jpg",
+    coverImage: "/images/ethnicart.png",
   },
   {
     slug: "warmheart",
@@ -21,7 +22,7 @@ export const projects: ProjectMeta[] = [
     tagline: "A React‑based donation website",
     blurb:
       "Streamlined donation flows, transparent campaigns, and empathetic UI supporting meaningful causes.",
-    // coverImage: "/images/projects/warmheart.jpg",
+    coverImage: "/images/warmheart.png",
   },
   {
     slug: "gadget-heaven",
@@ -29,7 +30,8 @@ export const projects: ProjectMeta[] = [
     tagline: "An accessory and gadget platform",
     blurb:
       "Browse curated gadgets and accessories with helpful comparisons and buyer‑friendly features.",
-    // coverImage: "/images/projects/gadget-heaven.jpg",
+    // NOTE: File currently named gadgetHeaven.png (camelCase). Consider renaming the file to gadget-heaven.png to match slug.
+    coverImage: "/images/gadgetHeaven.png",
   },
   {
     slug: "bookvibe",
@@ -37,7 +39,7 @@ export const projects: ProjectMeta[] = [
     tagline: "An online bookstore",
     blurb:
       "Find your next read with categorized browsing, wishlists, and a smooth checkout experience.",
-    // coverImage: "/images/projects/bookvibe.jpg",
+    coverImage: "/images/bookvibe.png",
   },
 ];
 

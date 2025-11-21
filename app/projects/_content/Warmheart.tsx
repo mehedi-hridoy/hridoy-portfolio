@@ -1,17 +1,158 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
 export default function Warmheart() {
   return (
-    <article className="prose prose-invert max-w-none">
-      <h2>Overview</h2>
-      <p>
-        Warmheart is a React-based donation platform that simplifies giving and
-        highlights transparent impact through clear campaign pages.
-      </p>
-      <h3>Key Features</h3>
-      <ul>
-        <li>Campaign listings with progress and goals</li>
-        <li>Easy, secure donation flow</li>
-        <li>Responsive, accessible UI</li>
-      </ul>
-    </article>
+    <section className="w-full pt-6">
+      {/* Banner Image */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="rounded-3xl overflow-hidden border border-white/10 shadow-xl"
+      >
+        <Image
+          src="/images/warmheart.png"
+          alt="Warm Hearts BD Project Image"
+          width={2000}
+          height={1100}
+          sizes="100vw"
+          priority
+          className="w-full object-cover"
+        />
+      </motion.div>
+
+      {/* Intro */}
+      <div className="mt-10">
+        <p className="text-purple-300 text-base font-medium">
+          React + Firebase Donation Platform
+        </p>
+
+        <p className="mt-4 text-gray-400 leading-relaxed max-w-3xl text-[17px]">
+          Warm Hearts BD delivers a pixel-perfect, responsive landing and
+          dashboard experience for a national winter relief movement. The site
+          highlights the mission, showcases donation impact, and provides
+          volunteers with a clean, modern dashboard powered by Firebase
+          authentication.
+        </p>
+      </div>
+
+      {/* Buttons */}
+      <div className="flex gap-4 mt-8">
+        <Link
+          href="https://warmheartbd.firebaseapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 bg-purple-600 hover:bg-purple-700 
+                     rounded-xl text-white font-semibold text-sm transition"
+        >
+          Live Demo
+        </Link>
+
+        <Link
+          href="https://github.com/mehedi-hridoy/Warm-Hearts-BD"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 bg-white/10 border border-white/10 
+                     hover:bg-white/20 rounded-xl text-white font-semibold 
+                     text-sm transition"
+        >
+          Project Repository
+        </Link>
+      </div>
+
+      {/* Overview + Features */}
+      <div className="mt-16 grid md:grid-cols-2 gap-6">
+        
+        {/* Project Overview */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="rounded-2xl bg-white/5 p-8 border border-white/10"
+        >
+          <h3 className="text-2xl font-semibold text-white mb-4">
+            Project Overview
+          </h3>
+          <p className="text-gray-400 leading-relaxed text-[15px]">
+            Warm Hearts BD was built to support a humanitarian mission —
+            mobilizing volunteers and donors across Bangladesh during winter.
+            The platform includes a beautiful landing page, real-time updates,
+            dashboards, Firebase-secured authentication, and smooth animations to
+            amplify engagement.
+          </p>
+        </motion.div>
+
+        {/* Features */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="rounded-2xl bg-white/5 p-8 border border-white/10"
+        >
+          <h3 className="text-2xl font-semibold text-white mb-4">
+            Key Features
+          </h3>
+          <ul className="space-y-3 text-gray-400 text-[15px]">
+            <li>• Fully responsive landing + volunteer dashboard</li>
+            <li>• Firebase Authentication (email/password)</li>
+            <li>• Donation coordination & mission updates</li>
+            <li>• Smooth animations via AOS + Animate.css</li>
+            <li>• Swiper-powered carousels</li>
+            <li>• Clean UI styled with Tailwind + DaisyUI</li>
+          </ul>
+        </motion.div>
+
+      </div>
+
+      {/* Tech Stack */}
+      <div className="mt-16 rounded-2xl p-8 bg-white/5 border border-white/10">
+        <h3 className="text-2xl font-semibold text-white mb-6">
+          Technology Stack
+        </h3>
+
+        <div className="grid md:grid-cols-2 gap-8 text-gray-300 text-[15px]">
+          
+          <div>
+            <p className="font-semibold text-white mb-2">Frontend</p>
+            <p>React 18, Vite, React Router</p>
+          </div>
+
+          <div>
+            <p className="font-semibold text-white mb-2">Styling</p>
+            <p>Tailwind CSS, DaisyUI, Animate.css, AOS</p>
+          </div>
+
+          <div>
+            <p className="font-semibold text-white mb-2">Auth / State</p>
+            <p>Firebase Auth, React Context API</p>
+          </div>
+
+          <div>
+            <p className="font-semibold text-white mb-2">UI Components</p>
+            <p>Swiper Carousel, React Icons</p>
+          </div>
+
+          <div>
+            <p className="font-semibold text-white mb-2">Hosting</p>
+            <p>Firebase Hosting</p>
+          </div>
+
+          <div>
+            <p className="font-semibold text-white mb-2">Design System</p>
+            <p>Custom Design Tokens (index.css)</p>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Footer space */}
+      <div className="pb-20" />
+    </section>
   );
 }

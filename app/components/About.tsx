@@ -4,11 +4,11 @@ import { Code, CodeBlock, CodeHeader } from "@/components/animate-ui/components/
 
 export default function About() {
   const mehediConfig = `
-// mehedi.config.js
+// hridoy.config.js
 
-const Mehedi = {
-  mode: "dark",                // light attracts bugs
-  status: Boolean("grind"),    // still single, still focused
+const Hridoy = {
+  mode: "dark",                // cause light attracts bugs
+  status: !true,               // still single, still compiling
   traits: ["curious", "calm", "debuggerByNature"],
 
   lifeLoop() {
@@ -22,15 +22,16 @@ const Mehedi = {
   },
 
   hobbies: [
-    "Crime-thriller marathons",
+    "Crime-thriller ",
     "Badminton battles disguised as 'friendly games'",
-    "Procrastination — mastered at a professional level",
+    "Professional procrastination (level: max)",
   ],
 
   bio: \`
-    Writes code. Breaks code. Fixes code. Pretends it was intentional.
-    Dark-mode native. Powered by caffeine and compiler warnings.
-    Forever torn between clean architecture and ship-it-now energy.
+    Writes code. Breaks code. fixes code. Pretends it was intentional.
+    Dark-mode native. Powered by  compiler warnings.
+    Runs on sleepy eyes, curiosity, and the hope that
+    today's bug is tomorrow's feature.
   \`,
 
   philosophy() {
@@ -44,10 +45,10 @@ const Mehedi = {
   },
 
   quote:
-    "There are 10 types of people: those who debug at 4AM and those who lie about it."
+    "There are only 10 types of people in the world: those who sleep and those who ship at 4 AM."
 };
 
-export default Mehedi;
+export default Hridoy;
   `;
 
   return (
@@ -55,8 +56,7 @@ export default Mehedi;
       <h2 className="text-[42px] font-extrabold mb-6 text-white">About Me</h2>
 
       <p className="text-gray-400 max-w-2xl mb-12 leading-relaxed text-lg">
-        A developer expressed as a config file.
-        Clean code, dark mode, and a little personality.
+       Single source of truth: light mode is a lie. Me, without the config file.
       </p>
 
       <Code

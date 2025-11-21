@@ -11,6 +11,7 @@ import {
   HiOutlineEnvelope,
   HiOutlineMoon,
   HiOutlineSun,
+  HiOutlineAcademicCap,
 } from "react-icons/hi2";
 
 export default function Navbar() {
@@ -20,6 +21,8 @@ export default function Navbar() {
     { name: "Home", icon: <HiOutlineHome size={22} />, href: "#" },
     { name: "Projects", icon: <HiOutlineFolder size={22} />, href: "#projects" },
     { name: "Tools", icon: <HiOutlineWrench size={22} />, href: "#tools" },
+    { name: "Academics", icon: <HiOutlineAcademicCap size={22} />, href: "#academics" },
+
     { name: "About", icon: <HiOutlineUserCircle size={22} />, href: "#about" },
     { name: "Contact", icon: <HiOutlineEnvelope size={22} />, href: "#contact" },
   ];
