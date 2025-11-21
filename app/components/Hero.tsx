@@ -52,12 +52,12 @@ export default function Hero() {
                 </span>
               </>
             }
-            className="text-5xl md:text-6xl font-extrabold leading-[1.05] text-white tracking-tight"
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.05] text-slate-900 dark:text-white tracking-tight"
             textAlign="left"
           />
 
           {/* Subheading */}
-          <p className="text-lg text-gray-300 leading-relaxed max-w-[680px]">
+          <p className="text-base sm:text-lg text-slate-700 dark:text-gray-300 leading-relaxed max-w-[680px]">
             Passionate about building intuitive, high-performance experiences
             that turn ideas into beautifully engineered products.
           </p>
@@ -80,25 +80,25 @@ export default function Hero() {
             showCursor
             hideCursorWhileTyping={false}
             cursorCharacter="|"
-            className="text-2xl md:text-3xl font-semibold text-gray-200"
+            className="text-xl sm:text-2xl md:text-3xl font-semibold text-slate-800 dark:text-gray-200"
           />
         </div>
 
       
 
         {/* Buttons */}
-        <div className="mt-14 flex items-center gap-6">
+        <div className="mt-14 flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6">
           <a
             href="/Mehedi_Hasan_Hridoy_CV.pdf"
             download
-            className="px-8 py-3 rounded-xl bg-[#9F3DFF] hover:bg-[#8B2DFF] transition text-white font-semibold shadow-md"
+            className="px-6 sm:px-8 py-3 rounded-xl bg-[#9F3DFF] hover:bg-[#8B2DFF] transition text-white font-semibold shadow-md text-center w-full sm:w-auto max-w-xs sm:max-w-none"
           >
             Download CV
           </a>
 
           <Link
             href="#projects"
-            className="flex items-center gap-2 text-white hover:underline font-medium"
+            className="flex items-center justify-center gap-2 text-slate-900 dark:text-white hover:underline font-medium"
           >
             My Work <ArrowRight className="w-4 h-4" />
           </Link>
@@ -106,7 +106,7 @@ export default function Hero() {
 
         {/* Logo Loop */}
        <div className="mt-28">
-  <p className="text-sm text-gray-400 mb-4">Things I Know</p>
+  <p className="text-sm text-slate-600 dark:text-gray-400 mb-4">Things I Know</p>
 
   <LogoLoop
     logos={[

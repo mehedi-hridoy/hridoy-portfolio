@@ -9,19 +9,19 @@ export default function LeftCard() {
   return (
     <div
       className="
-        w-[360px]
-        bg-black/40 dark:bg-white/10
+        w-full max-w-[360px] md:max-w-[500px] lg:max-w-[360px] mx-auto
+        bg-white/90 dark:bg-black/40 dark:dark:bg-white/10
         backdrop-blur-xl
         rounded-[32px]
-        border border-white/10
-        p-10
+        border border-slate-200 dark:border-white/10
+        p-8 sm:p-10
         shadow-xl
         text-center
         font-poppins
       "
     >
       {/* Profile Image */}
-      <div className="w-[250px] h-[300px] rounded-2xl overflow-hidden mx-auto mb-8">
+      <div className="w-full max-w-[250px] h-[300px] rounded-2xl overflow-hidden mx-auto mb-6 sm:mb-8">
         <Image
           src="/images/Mehedi_hridoy.png"
           alt="Mehedi Hasan Hridoy"
@@ -29,33 +29,33 @@ export default function LeftCard() {
           height={300}
           unoptimized={true}
           priority
-          className="object-cover"
+          className="object-cover w-full h-full"
           style={{ imageRendering: "crisp-edges" }}
         />
       </div>
 
       {/* Name */}
-      <h2 className="text-[26px] font-extrabold text-white mb-3 whitespace-nowrap">
+      <h2 className="text-[26px] font-extrabold text-slate-900 dark:text-white mb-3 whitespace-nowrap">
   Mehedi Hasan Hridoy
 </h2>
 
 
       {/* Title */}
-      <p className="text-gray-300 text-[15px] font-medium mb-1">
+      <p className="text-slate-700 dark:text-gray-300 text-[15px] font-medium mb-1">
         Full Stack Engineer
       </p>
 
       {/* Location */}
-      <p className="text-gray-500 text-xs tracking-wide mb-6">
+      <p className="text-slate-500 dark:text-gray-500 text-xs tracking-wide mb-6">
         Dhaka, Bangladesh
       </p>
 
       {/* Social Icons */}
-      <div className="flex items-center justify-center gap-7 mb-10 text-white/90 text-[22px]">
+      <div className="flex items-center justify-center gap-7 mb-10 text-slate-700 dark:text-white/90 text-[22px]">
         <a
           href="https://github.com/mehedi-hridoy"
           target="_blank"
-          className="hover:text-white transition"
+          className="hover:text-slate-900 dark:hover:text-white transition"
         >
           <FaGithub />
         </a>
@@ -64,7 +64,7 @@ export default function LeftCard() {
           href="https://x.com/_Mehedi_Hridoy"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white transition"
+          className="hover:text-slate-900 dark:hover:text-white transition"
         >
           <FaXTwitter />
         </a>
@@ -72,14 +72,14 @@ export default function LeftCard() {
         <a
           href="https://www.instagram.com/mehedi_hasan_.hridoy/"
           target="_blank"
-          className="hover:text-white transition"
+          className="hover:text-slate-900 dark:hover:text-white transition"
         >
           <FaInstagram />
         </a>
 
         <a
           href="mailto:mehedi.hridoy101@gmail.com"
-          className="hover:text-white transition"
+          className="hover:text-slate-900 dark:hover:text-white transition"
         >
           <HiOutlineEnvelope />
         </a>

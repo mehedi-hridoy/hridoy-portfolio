@@ -31,6 +31,7 @@ const LOGO_IDS = new Set([
   "vscode",
   "antigravity",
   "cursor",
+  "cpp",
 ]);
 
 const categories: { title: string; items: ToolItem[] }[] = [
@@ -49,7 +50,7 @@ const categories: { title: string; items: ToolItem[] }[] = [
       { id: "react", label: "React" },
       { id: "nextjs", label: "Next.js" },
       { id: "tailwind", label: "Tailwind CSS" },
-      { id: "shadcn", label: "shadcn/ui" },
+      { id: "shadcn", label: "shadcn" },
     ],
   },
   {
@@ -107,13 +108,13 @@ export default function Tools() {
       <div className="mb-4">
         <SplitText
           text="My Developer Toolbox"
-          className="text-[42px] font-bold tracking-tight text-slate-900 dark:text-white"
+          className="text-[32px] sm:text-[36px] md:text-[42px] font-bold tracking-tight text-slate-900 dark:text-white"
           textAlign="left"
           tag="h2"
         />
       </div>
 
-      <p className="text-slate-600 dark:text-gray-400 max-w-2xl mb-14 leading-relaxed">
+      <p className="text-slate-600 dark:text-gray-400 max-w-2xl mb-12 sm:mb-14 leading-relaxed text-sm sm:text-base">
         Tools, technologies, and platforms I rely on to design, build, deploy,
         and refine meaningful digital experiences.
       </p>

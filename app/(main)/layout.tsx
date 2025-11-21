@@ -10,15 +10,15 @@ export default function MainLayout({
     <>
       <Navbar />
 
-      <main className="pt-24 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-10">
-          {/* LEFT FIXED CARD — Desktop */}
+      <main className="pt-24 px-4 sm:px-6 max-w-7xl mx-auto pb-8">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
+          {/* LEFT CARD — Desktop (Sticky) */}
           <div className="hidden lg:block lg:w-[35%] sticky top-28 h-fit">
             <LeftCard />
           </div>
 
-          {/* LEFT CARD — Mobile */}
-          <div className="block lg:hidden w-full">
+          {/* LEFT CARD — Mobile & Tablet (Not Sticky, Centered) */}
+          <div className="lg:hidden w-full flex justify-center mb-8 px-2">
             <LeftCard />
           </div>
 

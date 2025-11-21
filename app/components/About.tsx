@@ -57,21 +57,21 @@ export default Hridoy;
       <div className="mb-6">
         <SplitText
           text="About Me"
-          className="text-[42px] font-bold text-white"
+          className="text-[32px] sm:text-[36px] md:text-[42px] font-bold text-slate-900 dark:text-white"
           textAlign="left"
           tag="h2"
         />
       </div>
 
-      <p className="text-gray-400 max-w-2xl mb-12 leading-relaxed text-lg">
+      <p className="text-slate-700 dark:text-gray-400 max-w-2xl mb-8 sm:mb-12 leading-relaxed text-base sm:text-lg">
        Single source of truth: light mode is a lie. Me, without the config file.
       </p>
 
       <Code
         code={mehediConfig}
-        className="max-w-3xl rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md"
+        className="w-full rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 backdrop-blur-md overflow-x-auto [&_code]:text-[14px] [&_code]:sm:text-[15px] [&_code]:md:text-[16px] [&_code]:leading-relaxed [&_pre]:whitespace-pre-wrap! [&_pre]:wrap-break-word [&_code]:text-slate-900 [&_code]:dark:text-white"
       >
-        <CodeHeader copyButton>mehedi.config.js</CodeHeader>
+        <CodeHeader copyButton>hridoy.config.js</CodeHeader>
         <CodeBlock lang="js" writing duration={6000} />
       </Code>
     </section>
