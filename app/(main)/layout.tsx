@@ -1,15 +1,17 @@
-import Navbar from "./components/Navbar";
-import LeftCard from "./components/LeftCard";
-import RightContent from "./components/RightContent";
+import Navbar from "../components/Navbar";
+import LeftCard from "../components/LeftCard";
 
-export default function Home() {
+export default function MainLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       <Navbar />
 
       <main className="pt-24 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-10">
-
           {/* LEFT FIXED CARD — Desktop */}
           <div className="hidden lg:block lg:w-[35%] sticky top-28 h-fit">
             <LeftCard />
@@ -21,10 +23,7 @@ export default function Home() {
           </div>
 
           {/* RIGHT CONTENT — Scrollable */}
-          <div className="w-full lg:w-[65%]">
-            <RightContent />
-          </div>
-
+          <div className="w-full lg:w-[65%]">{children}</div>
         </div>
       </main>
     </>

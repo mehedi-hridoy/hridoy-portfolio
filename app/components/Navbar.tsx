@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 import {
   HiOutlineHome,
@@ -18,13 +19,13 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
   const navItems = [
-    { name: "Home", icon: <HiOutlineHome size={22} />, href: "#" },
-    { name: "Projects", icon: <HiOutlineFolder size={22} />, href: "#projects" },
-    { name: "Tools", icon: <HiOutlineWrench size={22} />, href: "#tools" },
-    { name: "Academics", icon: <HiOutlineAcademicCap size={22} />, href: "#academics" },
+    { name: "Home", icon: <HiOutlineHome size={22} />, href: "/" },
+    { name: "Projects", icon: <HiOutlineFolder size={22} />, href: "/projects" },
+    { name: "Tools", icon: <HiOutlineWrench size={22} />, href: "/tools" },
+    { name: "Academics", icon: <HiOutlineAcademicCap size={22} />, href: "/academics" },
 
-    { name: "About", icon: <HiOutlineUserCircle size={22} />, href: "#about" },
-    { name: "Contact", icon: <HiOutlineEnvelope size={22} />, href: "#contact" },
+    { name: "About", icon: <HiOutlineUserCircle size={22} />, href: "/about" },
+    { name: "Contact", icon: <HiOutlineEnvelope size={22} />, href: "/contact" },
   ];
 
   return (
@@ -73,7 +74,7 @@ function NavIcon({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a
+    <Link
       href={href}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -101,6 +102,6 @@ function NavIcon({
           {name}
         </span>
       )}
-    </a>
+    </Link>
   );
 }

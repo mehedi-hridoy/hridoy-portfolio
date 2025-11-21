@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Academics() {
   return (
-    <section id="academics" className="w-full pt-28">
+    <section id="academics" className="w-full">
       {/* Section Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}

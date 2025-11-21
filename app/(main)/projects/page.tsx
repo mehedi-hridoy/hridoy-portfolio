@@ -1,4 +1,4 @@
-import { projects, type ProjectMeta } from "../data/projects";
+import { projects, type ProjectMeta } from "@/app/data/projects";
 import ProjectCard from "@/app/components/ProjectCard";
 
 export default function ProjectsPage() {

@@ -2,10 +2,10 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { ComponentType } from "react";
 import { getProjectBySlug, projects } from "@/app/data/projects";
-import EthniCart from "@/app/projects/_content/EthniCart";
-import Warmheart from "@/app/projects/_content/Warmheart";
-import GadgetHeaven from "@/app/projects/_content/GadgetHeaven";
-import Bookvibe from "@/app/projects/_content/Bookvibe";
+import EthniCart from "@/app/(main)/projects/_content/EthniCart";
+import Warmheart from "@/app/(main)/projects/_content/Warmheart";
+import GadgetHeaven from "@/app/(main)/projects/_content/GadgetHeaven";
+import Bookvibe from "@/app/(main)/projects/_content/Bookvibe";
 
 const contentMap: Record<string, ComponentType> = {
   ethnicart: EthniCart,
