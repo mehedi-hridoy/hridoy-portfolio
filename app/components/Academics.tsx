@@ -1,20 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import SplitText from "@/app/components/ui/SplitText";
 
 export default function Academics() {
   return (
     <section id="academics" className="w-full">
       {/* Section Heading */}
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="text-[42px] font-extrabold tracking-tight text-white mb-6"
-      >
-        Academics
-      </motion.h2>
+      <div className="mb-6">
+        <SplitText
+          text="Academics"
+          className="text-[42px] font-bold tracking-tight text-white"
+          textAlign="left"
+          tag="h2"
+        />
+      </div>
 
       <motion.p
         initial={{ opacity: 0, y: 18 }}

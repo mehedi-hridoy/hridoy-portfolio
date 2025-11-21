@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import { ContactSchema, type ContactFormData } from "@/lib/validation/contact";
 import { useState } from "react";
+import SplitText from "@/app/components/ui/SplitText";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -41,21 +42,22 @@ export default function Contact() {
   return (
     <section className="w-full pt-24 pb-32">
       {/* Heading */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="mb-12"
-      >
-        <h2 className="text-[48px] md:text-[56px] font-extrabold tracking-tight text-white leading-tight">
-          Let’s Create <br />
-          Something{" "}
-          <span className="text-[#A855F7] drop-shadow-[0_0_8px_rgba(168,85,247,0.6)]">
-            Amazing
-          </span>
-        </h2>
-      </motion.div>
+      <div className="mb-12">
+        <SplitText
+          text={
+            <>
+              Let&apos;s Create <br />
+              Something{" "}
+              <span className="text-[#A855F7] drop-shadow-[0_0_8px_rgba(168,85,247,0.6)]">
+                Amazing
+              </span>
+            </>
+          }
+          className="text-[48px] md:text-[56px] font-bold tracking-tight text-white leading-tight"
+          textAlign="left"
+          tag="h2"
+        />
+      </div>
 
       {/* Form Container */}
       <motion.div

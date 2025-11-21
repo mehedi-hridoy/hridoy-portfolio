@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SplitText from "@/app/components/ui/SplitText";
 
 type ToolItem = {
   id: string;
@@ -32,7 +33,7 @@ const LOGO_IDS = new Set([
   "cursor",
 ]);
 
-const categories: { title: string; items: ToolItem[] } = [
+const categories: { title: string; items: ToolItem[] }[] = [
   {
     title: "Programming Languages",
     items: [
@@ -103,9 +104,14 @@ export default function Tools() {
   return (
     <section className="w-full pt-28">
       {/* Main Heading */}
-      <h2 className="text-[42px] font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
-        My Developer Toolbox
-      </h2>
+      <div className="mb-4">
+        <SplitText
+          text="My Developer Toolbox"
+          className="text-[42px] font-bold tracking-tight text-slate-900 dark:text-white"
+          textAlign="left"
+          tag="h2"
+        />
+      </div>
 
       <p className="text-slate-600 dark:text-gray-400 max-w-2xl mb-14 leading-relaxed">
         Tools, technologies, and platforms I rely on to design, build, deploy,
@@ -167,7 +173,7 @@ export default function Tools() {
 
       {/* Beyond Code */}
       <section className="mt-20">
-        <h3 className="text-[32px] font-extrabold tracking-tight text-slate-900 dark:text-white mb-3">
+        <h3 className="text-[32px] font-bold tracking-tight text-slate-900 dark:text-white mb-3">
           Beyond Code
         </h3>
         <p className="text-slate-600 dark:text-gray-400 max-w-xl mb-10 leading-relaxed">

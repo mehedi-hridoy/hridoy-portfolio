@@ -19,7 +19,8 @@ export default function Projects() {
               </span>
             </>
           }
-          className="text-[48px] font-extrabold leading-[1.15] text-white tracking-tight"
+          className="text-[48px] font-bold leading-[1.15] text-white tracking-tight"
+          textAlign="left"
         />
       </div>
 

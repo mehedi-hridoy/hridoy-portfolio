@@ -1,6 +1,7 @@
 "use client";
 
 import { Code, CodeBlock, CodeHeader } from "@/components/animate-ui/components/animate/code";
+import SplitText from "@/app/components/ui/SplitText";
 
 export default function About() {
   const mehediConfig = `
@@ -53,7 +54,14 @@ export default Hridoy;
 
   return (
     <section className="w-full pt-24">
-      <h2 className="text-[42px] font-extrabold mb-6 text-white">About Me</h2>
+      <div className="mb-6">
+        <SplitText
+          text="About Me"
+          className="text-[42px] font-bold text-white"
+          textAlign="left"
+          tag="h2"
+        />
+      </div>
 
       <p className="text-gray-400 max-w-2xl mb-12 leading-relaxed text-lg">
        Single source of truth: light mode is a lie. Me, without the config file.
