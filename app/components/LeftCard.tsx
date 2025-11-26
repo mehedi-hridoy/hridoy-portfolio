@@ -55,6 +55,7 @@ export default function LeftCard() {
         <a
           href="https://github.com/mehedi-hridoy"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:text-slate-900 dark:hover:text-white transition"
         >
           <FaGithub />
@@ -72,6 +73,7 @@ export default function LeftCard() {
         <a
           href="https://www.instagram.com/mehedi_hasan_.hridoy/"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:text-slate-900 dark:hover:text-white transition"
         >
           <FaInstagram />

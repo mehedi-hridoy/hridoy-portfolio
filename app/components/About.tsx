@@ -53,23 +53,23 @@ export default Hridoy;
   `;
 
   return (
-    <section className="w-full pt-24">
-      <div className="mb-6">
+    <section className="w-full pt-16 sm:pt-20 md:pt-24">
+      <div className="mb-4 sm:mb-6">
         <SplitText
           text="About Me"
-          className="text-[32px] sm:text-[36px] md:text-[42px] font-bold text-slate-900 dark:text-white"
+          className="text-[28px] sm:text-[34px] md:text-[40px] lg:text-[42px] font-bold text-slate-900 dark:text-white"
           textAlign="left"
           tag="h2"
         />
       </div>
 
-      <p className="text-slate-700 dark:text-gray-400 max-w-2xl mb-8 sm:mb-12 leading-relaxed text-base sm:text-lg">
+      <p className="text-slate-700 dark:text-gray-400 max-w-2xl mb-6 sm:mb-8 md:mb-12 leading-relaxed text-sm sm:text-base md:text-lg">
        Single source of truth: light mode is a lie. Me, without the config file.
       </p>
 
       <Code
         code={mehediConfig}
-        className="w-full rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 backdrop-blur-md overflow-x-auto [&_code]:text-[14px] [&_code]:sm:text-[15px] [&_code]:md:text-[16px] [&_code]:leading-relaxed [&_pre]:whitespace-pre-wrap! [&_pre]:wrap-break-word [&_code]:text-slate-900 [&_code]:dark:text-white"
+        className="w-full rounded-xl sm:rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 backdrop-blur-md overflow-x-auto [&_code]:text-[12px] [&_code]:sm:text-[14px] [&_code]:md:text-[15px] [&_code]:lg:text-[16px] [&_code]:leading-relaxed [&_pre]:whitespace-pre-wrap! [&_pre]:wrap-break-word [&_code]:text-slate-900 [&_code]:dark:text-white"
       >
         <CodeHeader copyButton>hridoy.config.js</CodeHeader>
         <CodeBlock lang="js" writing duration={6000} />

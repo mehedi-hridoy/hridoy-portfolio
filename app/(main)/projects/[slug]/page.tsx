@@ -2,16 +2,20 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { ComponentType } from "react";
 import { getProjectBySlug, projects } from "@/app/data/projects";
+import CreatorPulse from "@/app/(main)/projects/_content/CreatorPulse";
+import Portfolio from "@/app/(main)/projects/_content/Portfolio";
 import EthniCart from "@/app/(main)/projects/_content/EthniCart";
-import Warmheart from "@/app/(main)/projects/_content/Warmheart";
 import GadgetHeaven from "@/app/(main)/projects/_content/GadgetHeaven";
-import Bookvibe from "@/app/(main)/projects/_content/Bookvibe";
+import FocusClock from "@/app/(main)/projects/_content/FocusClock";
+import Warmheart from "@/app/(main)/projects/_content/Warmheart";
 
 const contentMap: Record<string, ComponentType> = {
+  creatorpulse: CreatorPulse,
+  portfolio: Portfolio,
   ethnicart: EthniCart,
-  warmheart: Warmheart,
   "gadget-heaven": GadgetHeaven,
-  bookvibe: Bookvibe,
+  "focus-clock": FocusClock,
+  warmheart: Warmheart,
 };
 
 export function generateStaticParams() {
@@ -36,14 +40,14 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
   const displayTagline = meta?.tagline ?? "Project details";
 
   return (
-    <main className="w-full pt-24">
-      <div className="mx-auto max-w-5xl px-4 lg:px-8">
-        <Link href="/projects" className="flex items-center text-gray-300 mb-8 hover:text-white">
-          <ArrowLeft className="w-4 h-4 mr-2" /> All Projects
+    <main className="w-full pt-16 sm:pt-20 md:pt-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <Link href="/projects" className="flex items-center text-slate-600 dark:text-gray-300 mb-6 sm:mb-8 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2" /> All Projects
         </Link>
 
-        <h1 className="text-4xl font-extrabold text-white">{displayTitle}</h1>
-        <p className="text-gray-400 mt-2">{displayTagline}</p>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">{displayTitle}</h1>
+        <p className="text-slate-600 dark:text-gray-400 mt-2 text-sm sm:text-base">{displayTagline}</p>
 
         <div className="mt-10">
           {Content ? (

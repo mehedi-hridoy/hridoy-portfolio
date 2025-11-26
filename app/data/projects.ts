@@ -9,20 +9,28 @@ export type ProjectMeta = {
 
 export const projects: ProjectMeta[] = [
   {
+    slug: "creatorpulse",
+    title: "CreatorPulse — AI Analytics Copilot",
+    tagline: "Full-stack SaaS transforming creator analytics into actionable insights with AI",
+    blurb:
+      "Unifies multi-platform data, derives insights via Python AI brain, and generates content ideas with world-class UX.",
+    coverImage: "/images/creatorpulse_cover.png",
+  },
+  {
+    slug: "portfolio",
+    title: "Personal Portfolio",
+    tagline: "A modern, responsive portfolio built with Next.js 15 and cutting-edge web technologies",
+    blurb:
+      "Showcasing projects, skills, and experience with a premium design system, dark mode, and seamless navigation.",
+    coverImage: "/images/portfolio.png",
+  },
+  {
     slug: "ethnicart",
     title: "EthniCart",
     tagline: "An e‑commerce platform bringing rooted products directly from producers",
     blurb:
       "Discover authentic, locally rooted goods while empowering producers with a modern, accessible marketplace.",
     coverImage: "/images/ethnicart.png",
-  },
-  {
-    slug: "warmheart",
-    title: "warmheart",
-    tagline: "A React‑based donation website",
-    blurb:
-      "Streamlined donation flows, transparent campaigns, and empathetic UI supporting meaningful causes.",
-    coverImage: "/images/warmheart.png",
   },
   {
     slug: "gadget-heaven",
@@ -34,12 +42,20 @@ export const projects: ProjectMeta[] = [
     coverImage: "/images/gadgetHeaven.png",
   },
   {
-    slug: "bookvibe",
-    title: "Bookvibe",
-    tagline: "An online bookstore",
+    slug: "focus-clock",
+    title: "Focus Clock",
+    tagline: "Your all-in-one LED desk clock replacement app with timer, stopwatch, alarms & reminders",
     blurb:
-      "Find your next read with categorized browsing, wishlists, and a smooth checkout experience.",
-    coverImage: "/images/bookvibe.png",
+      "Built for landscape mode and always-on displays — a full-featured Flutter app designed to replace physical LED desk clocks.",
+    coverImage: "/images/FocusClock.png",
+  },
+  {
+    slug: "warmheart",
+    title: "warmheart",
+    tagline: "A React‑based donation website",
+    blurb:
+      "Streamlined donation flows, transparent campaigns, and empathetic UI supporting meaningful causes.",
+    coverImage: "/images/warmheart.png",
   },
 ];
 
