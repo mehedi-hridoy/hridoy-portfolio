@@ -89,7 +89,7 @@ export default function Hero() {
         {/* Buttons */}
         <div className="mt-14 flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6">
           <a
-            href="/Mehedi_Hasan_Hridoy_CV.pdf"
+            href="/Mehedi Hasan Hridoy.pdf"
             download
             className="px-6 sm:px-8 py-3 rounded-xl bg-[#9F3DFF] hover:bg-[#8B2DFF] transition text-white font-semibold shadow-md text-center w-full sm:w-auto max-w-xs sm:max-w-none"
           >
