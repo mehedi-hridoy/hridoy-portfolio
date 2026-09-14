@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 
@@ -18,6 +18,11 @@ import {
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navItems = [
     { name: "Home", icon: <HiOutlineHome className="w-5 h-5 sm:w-[22px] sm:h-[22px]" />, href: "/" },
@@ -53,8 +58,11 @@ export default function Navbar() {
         <button
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           className="relative text-white dark:text-white hover:opacity-80 transition"
+          aria-label="Toggle theme"
         >
-          {theme === "light" ? (
+          {!mounted ? (
+            <HiOutlineMoon className="w-5 h-5 sm:w-[22px] sm:h-[22px]" />
+          ) : theme === "light" ? (
             <HiOutlineMoon className="w-5 h-5 sm:w-[22px] sm:h-[22px]" />
           ) : (
             <HiOutlineSun className="w-5 h-5 sm:w-[22px] sm:h-[22px]" />
