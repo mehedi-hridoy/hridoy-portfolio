@@ -21,7 +21,11 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const frame = requestAnimationFrame(() => {
+      setMounted(true);
+    });
+
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   const navItems = [
