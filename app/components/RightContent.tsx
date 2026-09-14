@@ -1,4 +1,5 @@
 import Hero from "./Hero";
+import Experience from "./Experience";
 import Projects from "./Projects";
 import Tools from "./Tools/Tools";
 import About from "./About";
@@ -12,6 +13,11 @@ export default function RightContent() {
       {/* HOME SECTION */}
       <section id="home">
         <Hero />
+      </section>
+
+      {/* EXPERIENCE */}
+      <section id="experience">
+        <Experience />
       </section>
 
       {/* PROJECTS */}

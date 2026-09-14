@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import {
   HiOutlineHome,
+  HiOutlineBriefcase,
   HiOutlineFolder,
   HiOutlineWrench,
   HiOutlineUserCircle,
@@ -20,6 +21,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", icon: <HiOutlineHome className="w-5 h-5 sm:w-[22px] sm:h-[22px]" />, href: "/" },
+    { name: "Experience", icon: <HiOutlineBriefcase className="w-5 h-5 sm:w-[22px] sm:h-[22px]" />, href: "/#experience" },
     { name: "Projects", icon: <HiOutlineFolder className="w-5 h-5 sm:w-[22px] sm:h-[22px]" />, href: "/projects" },
     { name: "Tools", icon: <HiOutlineWrench className="w-5 h-5 sm:w-[22px] sm:h-[22px]" />, href: "/tools" },
     { name: "Academics", icon: <HiOutlineAcademicCap className="w-5 h-5 sm:w-[22px] sm:h-[22px]" />, href: "/academics" },
